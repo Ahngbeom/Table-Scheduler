@@ -5,16 +5,16 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: "http://localhost:8080"
+  },
+  build: {
+    outDir: "../backend/src/main/resources/static"
+  },
   plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  build: {
-    outDir: '../backend/src/main/resources/static'
-  },
-  server: {
-    proxy: 'http://localhost:8080'
   }
 })
