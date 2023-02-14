@@ -15,6 +15,6 @@ export default {
         { age: 38, first_name: 'Jami', last_name: 'Carney' }
       ]
     }
-  }
+  },
 }
 </script>
